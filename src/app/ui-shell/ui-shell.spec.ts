@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { App } from './app';
+import { UiShell } from './ui-shell';
 
-describe('App', () => {
-  let component: App;
-  let fixture: ComponentFixture<App>;
+describe('UiShell', () => {
+  let component: UiShell;
+  let fixture: ComponentFixture<UiShell>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App]
+      imports: [UiShell]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(App);
+    fixture = TestBed.createComponent(UiShell);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
