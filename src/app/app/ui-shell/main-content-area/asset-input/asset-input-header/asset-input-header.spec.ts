@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectAssetBody } from './select-asset-body';
+import { AssetInputHeader } from './asset-input-header';
 
-describe('SelectAssetBody', () => {
-  let component: SelectAssetBody;
-  let fixture: ComponentFixture<SelectAssetBody>;
+describe('AssetInputHeader', () => {
+  let component: AssetInputHeader;
+  let fixture: ComponentFixture<AssetInputHeader>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SelectAssetBody]
+      imports: [AssetInputHeader]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SelectAssetBody);
+    fixture = TestBed.createComponent(AssetInputHeader);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

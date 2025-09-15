@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataSourceBody } from './data-source-body';
+import { AssetViewport } from './asset-viewport';
 
-describe('DataSourceBody', () => {
-  let component: DataSourceBody;
-  let fixture: ComponentFixture<DataSourceBody>;
+describe('AssetViewport', () => {
+  let component: AssetViewport;
+  let fixture: ComponentFixture<AssetViewport>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DataSourceBody]
+      imports: [AssetViewport]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DataSourceBody);
+    fixture = TestBed.createComponent(AssetViewport);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

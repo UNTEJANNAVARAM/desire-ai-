@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssetInputPortHeader } from './asset-input-port-header';
+import { AssetInputBody } from './asset-input-body';
 
-describe('AssetInputPortHeader', () => {
-  let component: AssetInputPortHeader;
-  let fixture: ComponentFixture<AssetInputPortHeader>;
+describe('AssetInputBody', () => {
+  let component: AssetInputBody;
+  let fixture: ComponentFixture<AssetInputBody>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AssetInputPortHeader]
+      imports: [AssetInputBody]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AssetInputPortHeader);
+    fixture = TestBed.createComponent(AssetInputBody);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

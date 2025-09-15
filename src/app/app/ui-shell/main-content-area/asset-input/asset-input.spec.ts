@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CampaignDetailsBody } from './campaign-details-body';
+import { AssetInput } from './asset-input';
 
-describe('CampaignDetailsBody', () => {
-  let component: CampaignDetailsBody;
-  let fixture: ComponentFixture<CampaignDetailsBody>;
+describe('AssetInput', () => {
+  let component: AssetInput;
+  let fixture: ComponentFixture<AssetInput>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CampaignDetailsBody]
+      imports: [AssetInput]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CampaignDetailsBody);
+    fixture = TestBed.createComponent(AssetInput);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

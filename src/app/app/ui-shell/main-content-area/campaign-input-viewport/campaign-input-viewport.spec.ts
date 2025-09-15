@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectThemeBody } from './select-theme-body';
+import { CampaignInputViewport } from './campaign-input-viewport';
 
-describe('SelectThemeBody', () => {
-  let component: SelectThemeBody;
-  let fixture: ComponentFixture<SelectThemeBody>;
+describe('CampaignInputViewport', () => {
+  let component: CampaignInputViewport;
+  let fixture: ComponentFixture<CampaignInputViewport>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SelectThemeBody]
+      imports: [CampaignInputViewport]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SelectThemeBody);
+    fixture = TestBed.createComponent(CampaignInputViewport);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
