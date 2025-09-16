@@ -1,0 +1,38 @@
+.asset-viewport-header-container {
+  height: 100%;                  /* fills 20% of asset-viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--surface);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sub-header {
+  display: flex;
+  height: 100%;                  /* fill header container */
+  width: 100%;
+}
+
+.tab {
+  flex: 1;                        /* equal width for each tab */
+  display: flex;
+  align-items: center;            /* vertical center */
+  justify-content: center;        /* horizontal center */
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent; /* default underline */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--neutral-50);
+  position: relative;
+
+  &.active {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary); /* shows primary color underline */
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

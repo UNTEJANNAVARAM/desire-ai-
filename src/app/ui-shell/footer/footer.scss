@@ -1,0 +1,14 @@
+.main-footer {
+  width: 100%;                  // inherit full width from parent
+  height: 100%;                 // inherit height from parent (.ui-shell-footer)
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  // content aligned left
+  padding: 0 16px;              // horizontal padding
+  box-sizing: border-box;
+
+  background: var(--white);     // background color
+  color: var(--neutral-variant-50); 
+  font-size: 12px;
+  user-select: none;            // prevent text selection
+}

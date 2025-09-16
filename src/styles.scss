@@ -37,3 +37,32 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root {
+  --surface-container-high: #ffe2d9;
+  --header-container: #c45b31;
+  --on-secondary-container: #701f00;
+  --secondary-container: #fe8358;
+  --on-surface-variant: #5c4037;
+  --neutral-variant-50: #857368;
+  --primary: #ff5200;
+  --primary-fixed: #ffdbd0;
+  --surface: #fff8f6;
+  --borders: #e5e5e5;
+  --surface-container-low: #fff1ed;
+  --primary-container: #ff5711;
+  --white: #ffffff;
+  --secondary: #a23e1a;
+  --bg-50: #f8f8f8;
+  --variant-50: #998e8b;
+  --mangerine: #c45b31;
+  --secondary-fixed: #ffdbd0;
+  --bg-200: #d9d9d9; //text-box border
+  --primary-fixed-dim: #ffb59d; //scrollbar
+  --bg-300: #d2d2d2; //layouts background
+  --neutral-variant-80: #d8c2bb; //search box border
+  --secondary-variant:#fe8358; //asset-view icons
+  --surface1: #fff8f6;
+  --secondary-99: #fffbff;
+}

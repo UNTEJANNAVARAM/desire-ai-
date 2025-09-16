@@ -1,1 +1,24 @@
-<p>main-cta works!</p>
+<div class="cta-container">
+  <div class="cta-actions">
+    <!-- Back Button -->
+    <button
+      mat-raised-button
+      class="back"
+      *ngIf="currentStep > 1"
+      (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      Back
+    </button>
+
+    <!-- Next Button -->
+    <button
+      mat-raised-button
+      class="next"
+      (click)="goNext()"
+      [disabled]="canProceed">
+      Next
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.campaign-input-viewport {
+  height: 100%;                   /* fill parent section */
+  display: flex;
+  flex-direction: column;         /* stack header and body */
+  background: var(--bg-50);
+  border-right: 1px solid var(--borders);
+
+  app-campaign-input-viewport-header {
+    flex: 0 0 8%;                /* fixed 20% height */
+  }
+
+  app-campaign-input-viewport-body {
+    flex: 0 0 92%;                /* fixed 80% height */
+  }
+}

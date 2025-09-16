@@ -1,1 +1,14 @@
-<p>campaign-input-viewport-header works!</p>
+<header class="campaign-input-viewport-header-container">
+  <nav class="sub-header">
+    <button 
+      class="tab" 
+      [class.active]="wizard.currentStep === 1">
+      Campaign Details
+    </button>
+    <button 
+      class="tab" 
+      [class.active]="wizard.currentStep === 1.5">
+      Select Theme
+    </button>
+  </nav>
+</header>

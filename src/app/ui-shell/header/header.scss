@@ -1,0 +1,88 @@
+.header-bar {
+  height: 100%; 
+  width: 100%; 
+  z-index: 1000;          
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--mangerine);
+  padding: 0 0 0 16px; /* left padding only */
+  gap: 5px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    font-size: 24px;
+    color: var(--surface-container-high);
+  }
+}
+
+/* Progress Tracker */
+.header-progress {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  .step {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--primary-fixed);
+    color: var(--on-secondary-container);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+
+    &.active {
+      background-color: var(--white);
+      color: var(--on-secondary-container);
+      opacity: 1;
+    }
+  }
+
+  .line {
+    flex: 1;
+    border-top: 2px dashed var(--secondary-fixed);
+    opacity: 0.7;
+    transition: border-style 0.3s ease, opacity 0.3s ease;
+
+    .step.active + & {
+      border-top-style: solid;
+      opacity: 1;
+    }
+  }
+}
+
+/* Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--secondary-container);
+  color: var(--secondary);
+  padding: 0 12px;
+  height: 100%;
+  margin-left: auto; /* push to the right edge */
+}
+
+.action-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--secondary);
+
+  &:hover {
+    color: var(--on-secondary-container);
+  }
+}

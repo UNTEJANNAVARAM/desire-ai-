@@ -1,1 +1,14 @@
-<p>asset-input-header works!</p>
+<header class="asset-input-header-container">
+  <nav class="sub-header">
+    <button 
+      class="tab" 
+      [class.active]="wizard.currentStep === 3">
+      Asset Details
+    </button>
+    <button 
+      class="tab" 
+      [class.active]="wizard.currentStep === 3.5">
+      Data Source
+    </button>
+  </nav>
+</header>

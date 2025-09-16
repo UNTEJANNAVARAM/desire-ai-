@@ -1,1 +1,23 @@
-<p>header works!</p>
+<header class="header-bar" role="banner">
+  <!-- Left logo -->
+  <div class="header-logo">
+    <mat-icon>auto_stories</mat-icon>
+  </div>
+
+  <!-- Center progress tracker -->
+  <div class="header-progress">
+    <div class="step" [class.active]="currentStep >= 1">01</div>
+    <div class="line"></div>
+    <div class="step" [class.active]="currentStep >= 2">02</div>
+    <div class="line"></div>
+    <div class="step" [class.active]="currentStep >= 3">03</div>
+    <div class="line"></div>
+    <div class="step" [class.active]="currentStep >= 4">✓</div>
+  </div>
+
+  <!-- Right actions -->
+  <div class="header-actions">
+    <mat-icon class="action-icon" aria-label="Profile">account_circle</mat-icon>
+    <mat-icon class="action-icon" aria-label="Help">help_outline</mat-icon>
+  </div>
+</header>

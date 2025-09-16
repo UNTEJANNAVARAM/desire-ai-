@@ -1,1 +1,14 @@
-<p>asset-viewport-header works!</p>
+<header class="asset-viewport-header-container">
+  <nav class="sub-header">
+    <button 
+      class="tab" 
+      [class.active]="wizard.currentStep === 2">
+      Select Assets
+    </button>
+    <button 
+      class="tab" 
+      [class.active]="wizard.currentStep === 2.5">
+      Automation
+    </button>
+  </nav>
+</header>

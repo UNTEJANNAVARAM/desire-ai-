@@ -1,1 +1,31 @@
-<p>campaign-input-viewport-body works!</p>
+<section class="campaign-input-viewport-body">
+  <!-- Step 1: Campaign Details Form -->
+  <div class="details-form" *ngIf="wizard.currentStep === 1">
+    <div class="card-field">
+      <textarea  placeholder="Campaign description"></textarea>
+    </div>
+    <div class="card-field">
+      <textarea  placeholder="Offer details"></textarea>
+    </div>
+    <div class="card-field">
+      <textarea  placeholder="Visual imagery style description"></textarea>
+    </div>
+
+    <div class="reference-row">
+      <mat-icon>image</mat-icon>
+      <span>Reference</span>
+    </div>
+  </div>
+
+  <!-- Step 1.5: Theme Selector -->
+  <div class="theme-selector" *ngIf="wizard.currentStep === 1.5">
+    <mat-form-field appearance="outline" class="vertical-select">
+      <mat-label>Select vertical</mat-label>
+      <mat-select [(ngModel)]="selectedVertical">
+        <mat-option *ngFor="let v of verticals" [value]="v">{{ v }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Add template selector or other content here -->
+  </div>
+</section>

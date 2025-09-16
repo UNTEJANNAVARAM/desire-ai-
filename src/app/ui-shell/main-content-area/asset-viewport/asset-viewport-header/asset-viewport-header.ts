@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WizardState } from '../../../../services/wizard-state';
 
 @Component({
   selector: 'app-asset-viewport-header',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './asset-viewport-header.scss'
 })
 export class AssetViewportHeader {
-
+  constructor(public wizard: WizardState) {} 
 }

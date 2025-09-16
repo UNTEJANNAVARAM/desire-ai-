@@ -2,7 +2,7 @@
 
   <!-- Header -->
   <header class="ui-shell-header">
-    <app-header></app-header>
+    <app-header [currentStep]="wizard.currentStep"></app-header>
   </header>
 
   <!-- Left Navigation -->
@@ -17,7 +17,11 @@
 
   <!-- Main CTA Section -->
   <section class="ui-shell-cta">
-    <app-main-cta></app-main-cta>
+    <app-main-cta 
+      (back)="back()" 
+      (next)="next()" 
+      [currentStep]="wizard.currentStep">
+    </app-main-cta>
   </section>
 
   <!-- Footer -->

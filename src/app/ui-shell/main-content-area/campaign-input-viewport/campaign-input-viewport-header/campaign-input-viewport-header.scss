@@ -1,0 +1,39 @@
+.campaign-input-viewport-header-container {
+  height: 100%;                   /* fills 8% of parent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        /* vertically center nav */
+  background-color: var(--surface);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sub-header {
+  display: flex;
+  height: 100%;                   /* fill header container */
+  width: 100%;
+  position: relative;             /* for the underline indicator */
+}
+
+.tab {
+  flex: 1;                        /* equal width for tabs */
+  display: flex;
+  align-items: center;            /* vertical center text */
+  justify-content: center;        /* horizontal center text */
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent; /* default invisible underline */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--neutral-50);
+  position: relative;
+
+  &.active {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary); /* shows primary color underline */
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
