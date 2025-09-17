@@ -1,14 +1,14 @@
 <section class="campaign-input-viewport-body">
-  <!-- Step 1: Campaign Details Form -->
-  <div class="details-form" *ngIf="wizard.currentStep === 1">
+  <!-- Step: Campaign Details -->
+  <div class="details-form" *ngIf="wizard.currentStep === 'campaign-details'">
     <div class="card-field">
-      <textarea  placeholder="Campaign description"></textarea>
+      <textarea [(ngModel)]="description" (ngModelChange)="validate()" placeholder="Campaign description"></textarea>
     </div>
     <div class="card-field">
-      <textarea  placeholder="Offer details"></textarea>
+      <textarea [(ngModel)]="offer" (ngModelChange)="validate()" placeholder="Offer details"></textarea>
     </div>
     <div class="card-field">
-      <textarea  placeholder="Visual imagery style description"></textarea>
+      <textarea [(ngModel)]="visual" (ngModelChange)="validate()" placeholder="Visual imagery style description"></textarea>
     </div>
 
     <div class="reference-row">
@@ -17,8 +17,8 @@
     </div>
   </div>
 
-  <!-- Step 1.5: Theme Selector -->
-  <div class="theme-selector" *ngIf="wizard.currentStep === 1.5">
+  <!-- Step: Select Theme -->
+  <div class="theme-selector" *ngIf="wizard.currentStep === 'select-theme'">
     <mat-form-field appearance="outline" class="vertical-select">
       <mat-label>Select vertical</mat-label>
       <mat-select [(ngModel)]="selectedVertical">

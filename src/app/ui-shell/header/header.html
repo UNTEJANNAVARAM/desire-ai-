@@ -6,14 +6,15 @@
 
   <!-- Center progress tracker -->
   <div class="header-progress">
-    <div class="step" [class.active]="currentStep >= 1">01</div>
+    <div class="step" [class.active]="currentIndex >= 0">01</div>
     <div class="line"></div>
-    <div class="step" [class.active]="currentStep >= 2">02</div>
+    <div class="step" [class.active]="currentIndex >= 2">02</div>
     <div class="line"></div>
-    <div class="step" [class.active]="currentStep >= 3">03</div>
+    <div class="step" [class.active]="currentIndex >= 4">03</div>
     <div class="line"></div>
-    <div class="step" [class.active]="currentStep >= 4">✓</div>
+    <div class="step" [class.active]="currentIndex >= 5">✓</div>
   </div>
+
 
   <!-- Right actions -->
   <div class="header-actions">

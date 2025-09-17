@@ -2,6 +2,7 @@ import { CommonModule, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { WizardState, WizardStep } from '../../services/wizard-state';
 
 @Component({
   selector: 'app-main-cta',
@@ -10,20 +11,17 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './main-cta.scss'
 })
 export class MainCta {
-  @Input() currentStep: number = 1;
-  @Input() canProceed: boolean = false;
+  constructor(public wizard: WizardState) {}
 
-  @Output() next = new EventEmitter<void>();
-  @Output() back = new EventEmitter<void>();
+  get isCurrentStepValid(): boolean {
+    return this.wizard['stepValidity'][this.wizard.currentStep];
+  }
 
   goNext() {
-    console.log('Next clicked → currentStep:', this.currentStep+0.5);
-    this.next.emit();
+    this.wizard.goNext();
   }
 
   goBack() {
-    console.log('Back clicked → currentStep:', this.currentStep-0.5);
-    this.back.emit();
+    this.wizard.goBack();
   }
-  
 }

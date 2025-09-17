@@ -1,13 +1,9 @@
 <header class="campaign-input-viewport-header-container">
   <nav class="sub-header">
-    <button 
-      class="tab" 
-      [class.active]="wizard.currentStep === 1">
+    <button class="tab" [class.active]="wizard.currentStep === 'campaign-details'">
       Campaign Details
     </button>
-    <button 
-      class="tab" 
-      [class.active]="wizard.currentStep === 1.5">
+    <button class="tab" [class.active]="wizard.currentStep === 'select-theme'">
       Select Theme
     </button>
   </nav>

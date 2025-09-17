@@ -14,8 +14,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './campaign-input-viewport-body.scss'
 })
 export class CampaignInputViewportBody {
-  
+  description = '';
+  offer = '';
+  visual = '';  
+  wizardState: any;
   constructor(public wizard: WizardState) {}
+
+    validate() {
+    const isValid = this.description.trim() !== '' && this.offer.trim() !== '' && this.visual.trim() !== '';
+    this.wizard.setStepValid('campaign-details', isValid);
+    
+  }
+
+
 
   verticals = ['Retail', 'Food', 'Tech', 'Fashion'];
   selectedVertical: string = '';

@@ -4,7 +4,7 @@
     <button
       mat-raised-button
       class="back"
-      *ngIf="currentStep > 1"
+      *ngIf="wizard.currentStep !== 'campaign-details'"
       (click)="goBack()">
       <mat-icon>arrow_back</mat-icon>
       Back
@@ -15,7 +15,7 @@
       mat-raised-button
       class="next"
       (click)="goNext()"
-      [disabled]="canProceed">
+      [disabled]="!isCurrentStepValid">
       Next
       <mat-icon>arrow_forward</mat-icon>
     </button>

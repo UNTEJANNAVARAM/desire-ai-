@@ -5,25 +5,23 @@
   padding: 16px;
   box-sizing: border-box;
 }
-
 .details-form {
   display: flex;
   flex-direction: column;
-  gap: 4%;                    /* optional, adds spacing between fields */
   width: 100%;
-  height: 100%;               /* fill entire body */
-  overflow-x: hidden;
+  height: 100%;     /* fill the entire body */
+  gap: 8px;
 }
 
 .card-field {
-  flex: 0 0 20%;              /* each textarea takes 20% of body height */
+  flex: 0 0 30%;    /* each textarea takes exactly 20% of body height */
   display: flex;
   flex-direction: column;
 }
 
 textarea {
   width: 100%;
-  height: 100%;               /* fill card-field completely */
+  height: 100%;     /* fill card-field completely */
   background: var(--white);
   border: 0.5px solid var(--bg-200);
   border-radius: 10px;
@@ -33,27 +31,32 @@ textarea {
   line-height: 1.4;
   resize: none;
   outline: none;
-  overflow-y: hidden;
+  overflow-y: auto;
   box-sizing: border-box;
+
   /* Custom scrollbar */
   scrollbar-width: thin;
   scrollbar-color: var(--primary-fixed-dim) transparent;
+
   &::placeholder {
     color: var(--on-surface-variant);
   }
 }
 
 .reference-row {
-  flex: 0 0 20%;              /* reference row also takes 20% of body */
+  flex: 0 0 10%;    /* reference row takes the remaining 40% */
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
+  gap: 5px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--primary);
 
-  mat-icon {
-    font-size: 16px;
+    mat-icon {
+    font-size: 16px;           /* ensure icon has same vertical center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary);
   }
 }

@@ -27,6 +27,12 @@
   box-shadow: none;
 }
 
+.cta-container button.next:disabled {
+  background-color: var(--on-surface-opacity-10);   /* grey when disabled */
+  color: var(--on-surface);             /* text visible */      /* cursor style */
+  opacity: 0.6;             /* lighter look */
+}
+
 .cta-container button.next {
   background-color: var(--primary);
   color: var(--primary-fixed);
