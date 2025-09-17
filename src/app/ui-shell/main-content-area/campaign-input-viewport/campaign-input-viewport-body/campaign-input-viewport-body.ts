@@ -17,6 +17,19 @@ export class CampaignInputViewportBody {
   
   constructor(public wizard: WizardState) {}
 
+  selectedFileName: string | null = null;
+
+  onFileSelected(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  this.selectedFileName = null;
+  if (input.files && input.files[0]) {
+    const file = input.files[0];
+   this.selectedFileName = file.name; 
+    // TODO: you can now send this file to backend / FormData etc.
+  }
+}
+
+
   verticals = ['Retail', 'Food', 'Tech', 'Fashion'];
   selectedVertical: string = '';
   selectedTemplate: number | null = null;

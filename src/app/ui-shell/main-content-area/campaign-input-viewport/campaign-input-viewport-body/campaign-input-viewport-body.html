@@ -2,19 +2,32 @@
   <!-- Step 1: Campaign Details Form -->
   <div class="details-form" *ngIf="wizard.currentStep === 1">
     <div class="card-field">
-      <textarea  placeholder="Campaign description"></textarea>
+      <div class="card-label">Campaign description</div>
+      <textarea></textarea>
     </div>
     <div class="card-field">
-      <textarea  placeholder="Offer details"></textarea>
+      <div class="card-label">Offer details</div>
+      <textarea></textarea>
     </div>
     <div class="card-field">
-      <textarea  placeholder="Visual imagery style description"></textarea>
+      <div class="card-label">Visual imagery style description</div>
+      <textarea></textarea>
     </div>
 
-    <div class="reference-row">
+    <div class="reference-row" (click)="fileInput.click()">
       <mat-icon>image</mat-icon>
       <span>Reference</span>
+      <!-- show file name if selected -->
+      <span class="file-name" *ngIf="selectedFileName">{{ selectedFileName }}</span>
+      <input 
+        type="file" 
+        #fileInput 
+        accept="image/*" 
+        (change)="onFileSelected($event)" 
+        hidden
+      />
     </div>
+
   </div>
 
   <!-- Step 1.5: Theme Selector -->
